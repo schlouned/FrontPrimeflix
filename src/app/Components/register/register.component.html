@@ -1,0 +1,49 @@
+
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+              <label>{{'LastName' | translate }}</label>
+              <input class="form-control" formControlName="lastName"  placeholder="lastName" style="width:50%" >
+              <div *ngIf="submitted && f.lastName.errors" class="is-invalid">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>{{'FirstName' | translate }}</label>
+              <input class="form-control" formControlName="firstName" placeholder="firstName" style="width:50%">
+              <div *ngIf="submitted && f.firstName.errors" class="is-invalid">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>{{'Address' | translate }}</label>
+              <input class="form-control" formControlName="address" placeholder="address" style="width:50%">
+              <div *ngIf="submitted && f.address.errors" class="is-invalid">
+                <div *ngIf="f.address.errors.required">Address is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>{{'Email' | translate }}</label>
+              <input class="form-control" type="email" formControlName="email" placeholder="xyz@gmail.com" style="width:50%" required>
+              <div *ngIf="submitted && f.email.errors" class="is-invalid">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>{{'Password' | translate }}</label>
+              <input class="form-control" type="password" formControlName="password" placeholder="Password" style="width:50%">
+              <div *ngIf="submitted && f.password.errors" class="is-invalid">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </div>
+
+            <input type="submit" class="btn btn-secondary align-right" value="{{'Registration' | translate }}">
+          </form>
+        </div>

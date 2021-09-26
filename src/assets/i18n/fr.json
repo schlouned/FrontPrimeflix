@@ -1,0 +1,14 @@
+{
+  "Sitetitle": "Primeflix commerce en ligne",
+  "FirstName": "Prénom",
+  "LastName": "Nom",
+  "Address": "Adresse",
+  "Email": "Adresse email",
+  "Password": "Mot de passe",
+  "Registration": "S'enregistrer",
+  "Login": "Se connecter",
+  "Logout": "Se déconnecter",
+  "Submit": "Soumettre",
+  "LoginWithFacebook": "Se connecter avec Facebook",
+  "Logged as": "Connecté en tant que"
+}
